@@ -5,6 +5,7 @@ function [k, it] = newton(G,dG,k0,tol,maxit)
     while i < maxit
         
         [delta, ~] = pcg(dG(k),-G(k),tol,maxit,@(x) x);
+        % delta = -dG(k)\G(k);
         kii = k + delta;
         i = i + 1;  
         

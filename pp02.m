@@ -71,22 +71,29 @@ endfunction
 
 
 fprintf('starting tests with Adams-Moulton k=2,p=3\n')
-test_with_esv(1,y0,T,yex,f,df,a_moulton_k2,b_moulton_k2,'moulton_k2');
-test_with_esv(2,y0,T,yex,f,df,a_moulton_k2,b_moulton_k2,'moulton_k2');
-test_with_esv(3,y0,T,yex,f,df,a_moulton_k2,b_moulton_k2,'moulton_k2');
-test_with_esv(4,y0,T,yex,f,df,a_moulton_k2,b_moulton_k2,'moulton_k2');
+for i=1:4
+test_with_esv(i,y0,T,yex,f,df,a_moulton_k2,b_moulton_k2,'moulton_k2');
+end
+fprintf('Press any key to continue with other tests\n')
 pause;
 
 fprintf('starting tests with Adams-Moulton k=3,p=4\n')
-test_with_esv(1,y0,T,yex,f,df,a_moulton_k3,b_moulton_k3,'moulton_k3');
-test_with_esv(2,y0,T,yex,f,df,a_moulton_k3,b_moulton_k3,'moulton_k3');
-test_with_esv(3,y0,T,yex,f,df,a_moulton_k3,b_moulton_k3,'moulton_k3');
-test_with_esv(4,y0,T,yex,f,df,a_moulton_k3,b_moulton_k3,'moulton_k3');
+for i=1:4
+test_with_esv(i,y0,T,yex,f,df,a_moulton_k3,b_moulton_k3,'moulton_k3');
+end
+fprintf('Press any key to continue with other tests\n')
 pause;
 
 fprintf('starting tests with Adams-Bashforth k=3,p=3\n')
-test_with_esv(1,y0,T,yex,f,df,a_bashforth_k3,b_bashforth_k3,'bashforth_k3');
-test_with_esv(2,y0,T,yex,f,df,a_bashforth_k3,b_bashforth_k3,'bashforth_k3');
-test_with_esv(3,y0,T,yex,f,df,a_bashforth_k3,b_bashforth_k3,'bashforth_k3');
-test_with_esv(4,y0,T,yex,f,df,a_bashforth_k3,b_bashforth_k3,'bashforth_k3');
+for i=1:4
+test_with_esv(i,y0,T,yex,f,df,a_bashforth_k3,b_bashforth_k3,'bashforth_k3');
+end
+fprintf('Press any key to continue with other tests\n')
+pause;
 
+fprintf('starting tests with BDF k=2,p=2\n')
+for i=1:4
+test_with_esv(i,y0,T,yex,f,df,a_bdf_k2,b_bdf_k2,'bdf_k2');
+end
+
+fprintf('Done\n')
